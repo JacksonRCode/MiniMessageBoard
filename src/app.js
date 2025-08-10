@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/", indexRouter);
 app.use("/new", newRouter);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Mini message board app up and running! - ripping port ${PORT}`);
 });
