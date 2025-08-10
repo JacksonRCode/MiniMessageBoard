@@ -1,0 +1,17 @@
+<!-- index.ejs -->
+<html>
+  <body>
+    <%= title %>
+    <ul>
+        <% for (let i = 0; i < messages.length; i++) { %>
+            <li>
+                <h3>User: <%= messages[i].user %></h3>
+                <h5><%= messages[i].text %></h5>
+                <p>Date Sent: <%= messages[i].added %></p>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/new">New Message</a>
+  </body>
+</html>
+
